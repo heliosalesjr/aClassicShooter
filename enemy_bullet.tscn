@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhtqno68rmogf"]
+[gd_scene load_steps=4 format=3 uid="uid://db12mtocn77y7"]
 
-[ext_resource type="Script" path="res://EnemyBullet.gd" id="1_kghx3"]
-[ext_resource type="Texture2D" uid="uid://03dh7endv8l1" path="res://Mini Pixel Pack 3/Projectiles/Enemy_projectile (16 x 16).png" id="2_5y8j2"]
+[ext_resource type="Texture2D" uid="uid://03dh7endv8l1" path="res://Mini Pixel Pack 3/Projectiles/Enemy_projectile (16 x 16).png" id="1_iqbiy"]
+[ext_resource type="Script" path="res://enemy_bullet.gd" id="1_xmfln"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3iyul"]
-radius = 3.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_xex2i"]
+radius = 4.0
 
 [node name="EnemyBullet" type="Area2D"]
-script = ExtResource("1_kghx3")
+script = ExtResource("1_xmfln")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_5y8j2")
+texture = ExtResource("1_iqbiy")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_3iyul")
+shape = SubResource("CircleShape2D_xex2i")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
