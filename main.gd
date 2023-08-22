@@ -19,3 +19,9 @@ func spawn_enemies():
 
 func _on_enemy_died(value):
 	score += value
+	$CanvasLayer/UI.update_score(score)
+
+func _process(delta):
+	if get_tree().get_nodes_in_group("enemies").size() == 0 and score > 0:
+		spawn_enemies()
+

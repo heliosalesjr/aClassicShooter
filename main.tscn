@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxrvconepdqly"]
+[gd_scene load_steps=8 format=3 uid="uid://cxrvconepdqly"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_8fk4j"]
 [ext_resource type="Texture2D" uid="uid://c3tdkel2sxfq4" path="res://Mini Pixel Pack 3/Space_BG (2 frames) (64 x 64).png" id="1_8x5eo"]
 [ext_resource type="PackedScene" uid="uid://s3rmwnqpqq4d" path="res://ship.tscn" id="2_7dsh6"]
+[ext_resource type="PackedScene" uid="uid://q40qtwh1k47p" path="res://ui.tscn" id="4_ducco"]
 
 [sub_resource type="Animation" id="Animation_j6fhq"]
 length = 0.001
@@ -107,3 +108,7 @@ autoplay = "scroll"
 libraries = {
 "": SubResource("AnimationLibrary_cokk7")
 }
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("4_ducco")]
